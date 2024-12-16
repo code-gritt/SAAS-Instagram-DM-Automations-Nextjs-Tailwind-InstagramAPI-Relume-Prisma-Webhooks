@@ -4,6 +4,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
 import { ThemeProvider } from "@/providers/theme-provider";
 import { Toaster } from "sonner";
+import { LenisProvider } from "@/lib/lenis-context";
 
 const jakarta = Plus_Jakarta_Sans({ subsets: ["latin"] });
 
@@ -26,7 +27,7 @@ export default function RootLayout({
             defaultTheme="dark"
             disableTransitionOnChange
           >
-            {children}
+            <LenisProvider>{children}</LenisProvider>
 
             <Toaster />
           </ThemeProvider>
