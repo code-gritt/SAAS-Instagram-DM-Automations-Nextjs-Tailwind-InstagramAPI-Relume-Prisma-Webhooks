@@ -11,7 +11,11 @@ const Page = async (props: Props) => {
   //     return redirect(`dashboard/${user.data?.firstname}${user.data?.lastname}`);
   //   }
 
-  return redirect("/sign-in");
+  return (
+    <>
+      <div>Page</div>
+    </>
+  );
 };
 
 export default Page;
